@@ -4,3 +4,4 @@ venv
 *token.py
 *.log
 *tg_bot
+config.py
