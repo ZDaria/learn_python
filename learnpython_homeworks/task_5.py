@@ -2,7 +2,6 @@
 
 
 def hello_user():
-    mark = 0
     while True:
         try:
             answer = input("Как дела? ")
@@ -34,4 +33,3 @@ def discounted(price, discount, max_discount):
 
 
 print(discounted(10, 5, "er"))
-

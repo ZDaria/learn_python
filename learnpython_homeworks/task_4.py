@@ -18,7 +18,6 @@ actions_list = {"Как дела?": "Хорошо!",
 
 
 def user_ask(question_dict: dict):
-    user_question = ""
     print("Введите вопрос. Для остановки введите Пока")
     while True:
         user_question = input("Пользователь: ")

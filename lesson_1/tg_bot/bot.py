@@ -9,22 +9,27 @@ logging.basicConfig(filename=config.filename, level=logging.INFO)
 PROXY = {'proxy_url': config.proxy, config.url: {'username': config.user, 'password': config.pwd}}
 
 
-def talk_to_me(update, context):
+def talk_to_me(update):
     user_text = update.message.text.split()
-    print(user_text[0])
+    logging.info(f"We have got msg from user {user_text}")
     if user_text[0] == "/planet":
+        logging.info(f"Getting {user_text[0]} info ... ")
         planet_location = get_planet_info(user_text[1])
+        logging.info(f"Response to the user: {planet_location[1]}")
         update.message.reply_text(planet_location[1])
     else:
+        logging.info(f"Print user's msg one more time...")
         update.message.reply_text(user_text)
 
 
-def greet_user(update, context):
+def greet_user(update):
     update.message.reply_text("Привет пользователь! Ты вызвал команду /start")
 
 
 def get_planet_info(planet_name):
+    logging.info(f"Today date: {datetime.date.today()}")
     planet_info = getattr(ephem, planet_name)(str(datetime.date.today()))
+    logging.info(f"We have got planet info: {planet_info}")
     return ephem.constellation(planet_info)
 
 

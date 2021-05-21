@@ -14,5 +14,3 @@ text = "Vincent Malloy is seven years old " \
        "But he want's to be just like Vincent Price"
 count = Counter(text.lower().replace(" ", ""))
 print(count)
-
-
