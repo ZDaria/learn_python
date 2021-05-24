@@ -12,6 +12,13 @@ def string_comp(string_1, string_2):
         return 0
 
 
+print(string_comp("string", 1))
+print(string_comp(1, "learn"))
+print(string_comp("same string", "same string"))
+print(string_comp("this string is bigger", "little string"))
+print(string_comp("this string is bigger", "learn"))
+
+
 def test_return_0():
     """ Проверить, является ли то, что передано функции, строками. Если нет - вернуть 0 """
     assert 0 == string_comp("string", 1)

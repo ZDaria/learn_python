@@ -2,11 +2,10 @@
 
 
 def hello_user():
-    mark = 0
-    while mark == 0:
+    while True:
         answer = input("Как дела? ")
-        if answer == "Хорошо":
-            mark = 1
+        if answer.lower() == "хорошо":
+            break
 
 
 hello_user()
