@@ -43,4 +43,5 @@ def main():
     my_bot.idle()
 
 
-main()
+if __name__ == '__main__':
+    main()
