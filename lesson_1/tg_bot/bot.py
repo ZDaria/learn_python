@@ -6,7 +6,8 @@ import datetime
 
 
 logging.basicConfig(filename=config.filename, level=logging.INFO)
-PROXY = {'proxy_url': config.proxy, config.url: {'username': config.user, 'password': config.pwd}}
+PROXY = {'proxy_url': config.proxy, config.url: {'username': config.user,
+                                                 'password': config.pwd}}
 
 
 def talk_to_me(update):

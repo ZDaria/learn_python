@@ -14,8 +14,10 @@ def get_mid_mark(school_marks):
     middle_mark_school = 0
     class_middle_marks = []
     for school_class_scores in school_marks:
-        class_mid_mark = sum(school_class_scores['scores'])/len(school_class_scores['scores'])
-        class_middle_marks.append({"name": school_class_scores["name"], "mid_mark": class_mid_mark})
+        class_mid_mark = sum(school_class_scores['scores'])/\
+                         len(school_class_scores['scores'])
+        class_middle_marks.append({"name": school_class_scores["name"],
+                                   "mid_mark": class_mid_mark})
         middle_mark_school += class_mid_mark
     return class_middle_marks, middle_mark_school/len(school_marks)
 
