@@ -4,3 +4,4 @@ venv
 *token.py
 *.log
 config.py
+info.py
