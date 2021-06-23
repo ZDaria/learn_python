@@ -11,7 +11,6 @@ def index():
     page_title = "Новости Python"
     weather = weather_by_city("Moscow, Russia")
     news_list = get_python_news()
-    print(news_list)
     return render_template('index.html', page_title=page_title,
                            weather=weather, news_list=news_list)
 
