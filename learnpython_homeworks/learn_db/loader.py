@@ -3,10 +3,11 @@ import time
 from db import db_session
 from model_salary import Salary
 
+
 def read_csv2(filename):
     with open(filename, 'r', encoding='utf-8') as f:
-        fields = ['name', 'name', 'address', 'company',
-                  'job', 'phone_number', 'free_email', 'date_of_birth',
+        fields = ['name', 'city', 'address', 'company',
+                  'job', 'phone_number', 'email', 'date_of_birth',
                   'salary']
         reader = csv.DictReader(f, fields, delimiter=';')
         salary_data = []
@@ -23,7 +24,7 @@ def save_salary_data2(data):
 def read_csv(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         fields = ['name', 'city_name', 'street_address', 'large_company',
-                  'job', 'phone_number', 'free_email', 'date_of_birth',
+                  'job', 'phone_number', 'email', 'date_of_birth',
                   'salary']
         reader = csv.DictReader(f, fields, delimiter=';')
         for row in reader:
