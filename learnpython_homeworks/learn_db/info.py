@@ -1,0 +1,1 @@
+db_string = "postgresql://mfkhtwul:UCu5TZs_LG4EiFD_iF-cW33_RJ49dKmO@hattie.db.elephantsql.com/mfkhtwul"
