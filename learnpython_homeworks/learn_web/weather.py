@@ -1,10 +1,14 @@
 import requests
+import configparser
+
+config = configparser.ConfigParser()
+config.read("config.ini")
 
 
 def weather_by_city(city_name):
-    weather_url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
+    weather_url = config['LEARN_WEB']['weather_url']
     params = {
-        "key": "7dfe475680c84f97a48182255210506",
+        "key": config['LEARN_WEB']['weather_url_key'],
         "q": city_name,
         "format": "json",
         "num_of_days": 1,
