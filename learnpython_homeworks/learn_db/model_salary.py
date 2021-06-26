@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, Date
 
 from db import Base, engine
 
+# week 5 task
 
 class Salary(Base):
     __tablename__ = 'salaries'
