@@ -6,9 +6,9 @@ config.read("config.ini")
 
 
 def weather_by_city(city_name):
-    weather_url = config['LEARN_WEB']['weather_url']
+    weather_url = config['LEARNWEB']['weather_url']
     params = {
-        "key": config['LEARN_WEB']['weather_url_key'],
+        "key": config['LEARNWEB']['weather_url_key'],
         "q": city_name,
         "format": "json",
         "num_of_days": 1,
