@@ -1,14 +1,11 @@
 import requests
-import configparser
-
-config = configparser.ConfigParser()
-config.read("config.ini")
+from flask import current_app
 
 
 def weather_by_city(city_name):
-    weather_url = config['LEARN_WEB']['weather_url']
+    weather_url = current_app.config['WEATHER_URL']
     params = {
-        "key": config['LEARN_WEB']['weather_url_key'],
+        "key": current_app.config['WEATHER_URL_KEY'],
         "q": city_name,
         "format": "json",
         "num_of_days": 1,

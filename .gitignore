@@ -5,3 +5,5 @@ venv
 *.log
 config.py
 info.py
+*.db
+grinding_converter
