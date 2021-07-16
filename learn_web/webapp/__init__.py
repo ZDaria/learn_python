@@ -50,7 +50,7 @@ def create_app():
     @app.route('/logout')
     def logout():
         logout_user()
-        flash('Вы успешно вошли на сайт')
+        flash('Пока!')
         return redirect(url_for('index'))
 
     return app
