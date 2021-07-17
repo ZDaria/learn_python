@@ -3,7 +3,8 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-from .model import db, News
+from .db import db
+from news.models import News
 
 
 def get_html(url):
@@ -28,7 +29,7 @@ def get_python_news():
             try:
                 published = datetime.strptime(published, '%Y-%m-%d')
             except ValueError:
-                published = datetime.now( )
+                published = datetime.now()
             save_news(title, url, published)
 
 
