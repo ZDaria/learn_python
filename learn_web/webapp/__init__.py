@@ -1,5 +1,6 @@
 from flask import Flask, render_template, flash, url_for, redirect
-from flask_login import LoginManager, current_user, login_required, login_user, logout_user
+from flask_login import LoginManager, current_user, login_required, \
+    login_user, logout_user
 
 from .forms import LoginForm
 from .weather import weather_by_city
@@ -27,7 +28,7 @@ def create_app():
         weather = weather_by_city(app.config['WEATHER_SITY'])
         news_list = News.query.order_by(News.published.desc()).all()
         return render_template('index.html', page_title=page_title,
-                              weather=weather, news_list=news_list)
+                               weather=weather, news_list=news_list)
 
     @app.route('/login')
     def login():
